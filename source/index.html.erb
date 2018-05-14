@@ -71,7 +71,10 @@ title: Le Wagon - Middleman
             </li>
             <li>
               <p> Rating:
-              <% flat.rating.times do%>
+              <% (flat.rating).times do%>
+                <i class="fa fa-star" id="yellow"></i>
+              <% end %>
+              <% (5-flat.rating).times do%>
                 <i class="fa fa-star"></i>
               <% end %>
               </p>
