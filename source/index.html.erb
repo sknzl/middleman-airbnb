@@ -1,4 +1,4 @@
----
+<!-- ---
 title: Le Wagon - Middleman
 ---
 
@@ -13,3 +13,38 @@ title: Le Wagon - Middleman
     </p>
   </div>
 </div>
+ -->
+ <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1>Le Wagon Berlin</h1>
+    <p>Learn to code with us in Berlin</p>
+    <ul class="list-unstyled">
+    <li>
+      <a class="btn btn-primary btn-lg">Start now</a>
+    </li>
+    <li>
+      <%= link_to "Meet the team", "team.html", class: "btn btn-info btn-lg" %>
+    </li>
+    </ul>
+  </div>
+</div>
+
+<h3 class = "text-center"> Le Wagon in other cities </h3>
+<div class="container">
+  <div class="row">
+    <% %w(Berlin Lisbon Paris London Amsterdam Rio Berlin Lisbon Paris London Amsterdam Rio).each do |city|%>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= city.downcase %>');">
+        <div class="card-category">Popular</div>
+        <div class="card-description">
+          <h2>Le Wagon <%= city.capitalize %> </h2>
+          <p>Very cool city, the best</p>
+        </div>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
